@@ -73,3 +73,79 @@ export type DailyPulse = {
   anomalies: string[] | null;
   created_at: string;
 };
+
+export type MetaCampaign = {
+  id: string;
+  meta_id: string;
+  brand_id: string | null;
+  name: string;
+  status: string;
+  effective_status: string | null;
+  objective: string | null;
+  daily_budget: number | null;
+  lifetime_budget: number | null;
+  spend: number;
+  impressions: number;
+  clicks: number;
+  ctr: number | null;
+  cpc: number | null;
+  conversions: number;
+  cost_per_conversion: number | null;
+  start_time: string | null;
+  end_time: string | null;
+  last_synced_at: string | null;
+  ai_health: number;
+  ai_recommendation: string | null;
+  created_at: string;
+};
+
+export type MetaAdSet = {
+  id: string;
+  meta_id: string;
+  campaign_meta_id: string;
+  name: string;
+  status: string;
+  effective_status: string | null;
+  daily_budget: number | null;
+  optimization_goal: string | null;
+  billing_event: string | null;
+  age_min: number | null;
+  age_max: number | null;
+  locations: string | null;
+  platforms: string | null;
+  spend: number;
+  impressions: number;
+  clicks: number;
+  conversions: number;
+  start_time: string | null;
+  end_time: string | null;
+  last_synced_at: string | null;
+  created_at: string;
+};
+
+export type MetaAd = {
+  id: string;
+  meta_id: string;
+  adset_meta_id: string;
+  campaign_meta_id: string;
+  name: string;
+  status: string;
+  effective_status: string | null;
+  creative_id: string | null;
+  spend: number;
+  impressions: number;
+  clicks: number;
+  conversions: number;
+  last_synced_at: string | null;
+  created_at: string;
+};
+
+export type AIWorkerLog = {
+  id: string;
+  worker_name: string;
+  action: string;
+  target: string | null;
+  details: string | null;
+  severity: string;
+  created_at: string;
+};
